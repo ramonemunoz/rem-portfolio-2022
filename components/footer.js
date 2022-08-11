@@ -1,7 +1,18 @@
 import Container from './container'
 import { EXAMPLE_PATH } from '../lib/constants'
 
+import { useAppContext } from '../context/app-state'; 
+
 export default function Footer() {
+
+  const {
+    sharedState,
+    anotherTest,
+    testFunction
+  } = useAppContext()
+
+  testFunction('RAMON WAS HERE')
+
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
@@ -21,6 +32,10 @@ export default function Footer() {
               className="mx-3 font-bold hover:underline"
             >
               View on GitHub
+              {' '}
+              {sharedState}
+              {' '}
+              {anotherTest}
             </a>
           </div>
         </div>
