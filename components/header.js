@@ -1,12 +1,15 @@
-import Link from 'next/link'
-
 export default function Header() {
   return (
-    <h2 className="text-2xl md:text-4xl font-bold tracking-tight md:tracking-tighter leading-tight mb-20 mt-8">
-      <Link href="/">
-        <a className="hover:underline">Blog</a>
-      </Link>
-      .
-    </h2>
+    <div className={'header'}>
+      <div className={'header__left'}>
+        <p>Left</p>
+      </div>
+      <div className={'header__center'}>
+        <p>Center</p>
+      </div>
+      <div className={'header__right'}>
+        <p>Right</p>
+      </div>
+    </div>
   )
 }

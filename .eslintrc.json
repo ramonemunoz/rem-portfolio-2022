@@ -1,0 +1,14 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "quotes": ["error", "single"],
+		"import/extensions": ["error", "always", {"js": "never", "jsx": "never"}],
+		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-props-no-spreading": "off",
+		"react/function-component-definition": "off",
+		"no-anonymous-exports-page-templates": "off",
+		"limited-exports-page-templates": "off",
+		"import/prefer-default-export": "off",
+		"no-restricted-exports": "off"
+	}
+}
