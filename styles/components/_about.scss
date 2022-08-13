@@ -1,0 +1,124 @@
+// About Component
+
+.about {
+    max-height: 555px;
+    padding: 0 25px;
+    border-bottom: 1px solid $gray;
+    position: relative;
+    overflow: scroll;
+    display: flex;
+    transform: rotateX(90deg);
+    transform-origin: top; 
+    transition: transform 1s, height 1s;
+
+    &--open{
+        transform: rotateX(0deg);
+        height: 555px;
+        transition-delay:0.5s, 0s;
+    }
+
+    &--close{
+        transform: rotateX(90deg);
+        height: 0;
+        transition-delay:0s, 0.5s;
+    }
+
+    &__bio {
+        width: 33.33%;
+        border-right: 4px solid $gray;
+        min-height: 100%;
+        padding-right: 25px;
+        overflow: scroll;
+    }
+
+    &__bio-header {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin-bottom: 40px;
+
+        p {
+            color: $gray-light;
+        }
+    }
+
+    &__bio-bio {
+        min-height: 100%;
+        padding-bottom: 120px;
+
+        p {
+            margin-bottom: 1.6rem;
+
+            &:last-of-type {
+                margin-bottom: 100%;
+            }
+        }
+    }
+
+    &__links {
+        bottom: 45px;
+        left: 25px;
+        position: absolute;
+        width: calc(33% - 42px);
+    }
+
+    &__links-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__links-development {
+        display: flex;
+        column-gap: 60px;
+    }
+
+    &__intrests {
+        width: 66.66%;
+        padding: 0 0 25px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__intrests-header {
+        display: flex;
+        padding-top: 25px;
+        margin-bottom: 45px;
+
+        p {
+            color: $gray-light;
+
+            &:nth-child(1) {
+                width: 30%;
+            }
+            &:nth-child(2) {
+                width: 35%;
+            }
+            &:nth-child(3) {
+                width: 32%;
+            }
+        }
+    }
+
+    &__intrests-body {
+        display: flex;
+    
+        div {
+            &:nth-child(1) {
+                width: 30%;
+            }
+            &:nth-child(2) {
+                width: 35%;
+            }
+            &:nth-child(3) {
+                width: 32%;
+            }
+        }
+
+    }
+
+    &__intrests-subheader {
+        margin-bottom: 45px;
+    }
+}

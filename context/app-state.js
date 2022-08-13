@@ -1,8 +1,10 @@
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();
 
 export function AppWrapper({ children }) {
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
+
   let sharedState = 'Test'
   let anotherTest = 'Another Test'
 
@@ -15,7 +17,9 @@ export function AppWrapper({ children }) {
         value={{
             sharedState,
             anotherTest,
-            testFunction
+            testFunction,
+            isAboutOpen,
+            setIsAboutOpen
         }}>
       {children}
     </AppContext.Provider>

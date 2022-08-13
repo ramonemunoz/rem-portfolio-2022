@@ -1,0 +1,26 @@
+// Base Styles
+
+html {
+	font-size: 10px;
+}
+
+body {
+    font-size: 1.5rem;
+
+    &.dark-mode {
+        color: $white;
+        background-color: $black;
+        border-color: $gray-darkmode;
+    }
+}
+
+button {
+	background-color: transparent;
+	color: inherit;
+	border-width: 0;
+	line-height: inherit;
+	letter-spacing: inherit;
+	padding: 0;
+	cursor: pointer;
+	transition: color 250ms ease;
+}

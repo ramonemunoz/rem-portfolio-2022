@@ -6,7 +6,15 @@
 	'abstracts/variables',
 	'abstracts/mixins';
 
-// 5. Components
+
+// 2. Base Styles
 
 @import
-    'components/header';
+	'base/base';
+
+	
+// 3. Components
+
+@import
+    'components/header',
+    'components/about';

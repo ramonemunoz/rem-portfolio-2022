@@ -8,10 +8,10 @@ export default function Footer() {
   const {
     sharedState,
     anotherTest,
-    testFunction
+    testFunction,
   } = useAppContext()
 
-  testFunction('RAMON WAS HERE')
+  testFunction('Ramon Was Here')
 
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
