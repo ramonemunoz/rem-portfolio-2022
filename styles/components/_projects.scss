@@ -7,11 +7,68 @@
     &__info {
         display: flex;
         width: 33.33%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__title-container {
+        min-width: 114px;
+        margin-right: 101px;
+        transition: all 500ms ease-in-out;
+        background-color: $white;
+        display: flex;
+
+        &--show {
+            width: 100vw;
+            justify-content: flex-end;
+
+        }
+    }
+
+    &__additional-info-tech {
+        display: flex;
+        flex-direction: column;
+        border-right: 1px solid $gray;
+        padding: 25px;
+        display: none;
+
+        &--show {
+            display: flex;
+        }
+
+        p {
+            &:nth-of-type(2) {
+                margin-bottom: 130px;
+            }
+        }
+    }
+
+    &__additional-info-header {
+        color: $gray-light;
+        margin-bottom: 40px;
+    }
+
+    &__additional-info-links {
+        flex-direction: column;
+        justify-content: space-around;
+        border-right: 1px solid $gray;
+        padding-left: 40px;
+        display: none;
+
+        &--show {
+            display: flex;
+        }
+
+        p,
+        a {
+            writing-mode: vertical-rl;
+            font-size: 10rem;
+            line-height: 9.5rem;
+            font-weight: 300;
+        }
     }
 
     &__title {
-        min-width: 114px;
-        margin-right: 101px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -28,6 +85,7 @@
 
     &__number {
         font-size: 15rem;
+        font-weight: 300;
     }
 
     &__description {
@@ -38,6 +96,16 @@
         justify-content: space-between;
         border-left: 1px solid $gray;
         padding: 0 20px;
+        opacity: 1;
+        visibility: visible;
+        transition: all 250ms ease;
+
+        &--hide {
+            padding: 0;
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+        }
     }
 
     &__description-info {
