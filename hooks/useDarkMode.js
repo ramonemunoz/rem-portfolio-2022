@@ -1,23 +1,24 @@
 import { useEffect, useState } from 'react';
 
 function useDarkMode() {
-    const [isDarkMode, setIsDarkMode] = useState(
-        typeof window !== 'undefined' ? localStorage.darkMode : false
-    );
-    const colorTheme ='dark-mode';
-
-    useEffect(() => {
+    const [theme, setTheme] = useState(
+        typeof window !== 'undefined' ? localStorage.theme : 'dark'
+      );
+      const colorTheme = theme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    
+      useEffect(() => {
         const root = window.document.body;
-
-        root.classList.toggle(colorTheme);
-
+    
+        root.classList.remove(colorTheme);
+        root.classList.add(theme);
+    
         if (typeof window !== 'undefined') {
-            localStorage.setItem('darkMode', !isDarkMode);
+          localStorage.setItem('theme', theme);
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isDarkMode]);
-
-    return [isDarkMode, setIsDarkMode];
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      }, [theme]);
+    
+      return [colorTheme, setTheme];
 }
 
 export default useDarkMode;

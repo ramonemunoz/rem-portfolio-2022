@@ -11,7 +11,7 @@ export default function About() {
       } = useAppContext()
 
     return (
-        <div className={`about ${isAboutOpen ? 'about--open' : 'about--close'}`}>
+        <section className={`about ${isAboutOpen ? 'about--open' : 'about--close'}`}>
             <div className={'about__bio'}>
                 <div className={'about__bio-header'}>
                     <p>Currently in Los Angeles</p>
@@ -98,7 +98,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
   }
   

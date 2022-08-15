@@ -5,6 +5,7 @@ import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import About from '../components/about'
+import Projects from '../components/projects'
 
 
 import { getAllPosts } from '../lib/api'
@@ -36,6 +37,7 @@ export default function Index({ allPosts }) {
       </Layout>
       <Header />
       <About />
+      <Projects />
     </>
   )
 }

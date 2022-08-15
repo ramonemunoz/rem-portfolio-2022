@@ -9,10 +9,10 @@ export default function Header() {
     setIsAboutOpen
   } = useAppContext()
 
-  const [_ , setIsDarkMode] = useDarkMode();
+  const [_ , setTheme] = useDarkMode();
 
   return (
-    <div className={'header'}>
+    <nav className={'header'}>
       <div className={'header__left'}>
         <p>Ramon E. Munoz</p>
         <button type={'button'} onClick={() => setIsAboutOpen(state => { return !state })}>About</button>
@@ -24,8 +24,8 @@ export default function Header() {
         </div>
         <p><a href="mailto:ramon@ramon-munoz.com">Contact</a></p>
         <CurrentTime />
-        <button type={'button'} onClick={() => setIsDarkMode(state => { return !state })}>&#11044;</button>
+        <button type={'button'} onClick={() => setTheme(state => { return state === 'dark-mode' ? 'light-mode' : 'dark-mode';})}>&#11044;</button>
       </div>
-    </div>
+    </nav>
   )
 }
