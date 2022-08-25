@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 
 import fpo from '../public/assets/FPO.png'
+import fpo2 from '../public/assets/FPO2.png'
+import fpo3 from '../public/assets/FPO3.png'
+import fpo4 from '../public/assets/FPO4.png'
 
 export default function Projects() {
     const [showAdditionalInfo, setShowAdditionalInfo] = useState(false)
@@ -51,13 +54,85 @@ export default function Projects() {
         </div>
         <div className={'projects__media'}>
             <div className={'projects__media-container'}>
-                    <Image
-                        src={fpo}
-                        alt="FPO"
-                        placeholder="blur" // Optional blur-up while loading
-                        layout="responsive"
-                    />
+                <div className={'projects__media-item'}>
+                    <div className={'projects___media-item-browser'}>
+                        <div className="top">
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                        </div>
+                        <Image
+                            src={fpo}
+                            alt="FPO"
+                            placeholder="blur" // Optional blur-up while loading
+                            layout="fixed"
+                        />
+                    </div>
+                </div>
+                <div className={'projects__media-item projects__media-item--1'}>
+                    <div className={'projects___media-item-browser'}>
+                        <div className="top">
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                        </div>
+                        <Image
+                            src={fpo2}
+                            alt="FPO"
+                            placeholder="blur" // Optional blur-up while loading
+                            layout="fixed"
+                        />
+                    </div>
+                </div>
+                <div className={'projects__media-item projects__media-item--2'}>
+                    <div className={'projects___media-item-browser'}>
+                        <div className="top">
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                        </div>
+                        <Image
+                            src={fpo3}
+                            alt="FPO"
+                            placeholder="blur" // Optional blur-up while loading
+                            layout="fixed"
+                        />
+                    </div>
+                </div>
+                <div className={'projects__media-item projects__media-item--3'}>
+                    <div className={'projects___media-item-browser'}>
+                        <div className="top">
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                        </div>
+                        <Image
+                            src={fpo4}
+                            alt="FPO"
+                            placeholder="blur" // Optional blur-up while loading
+                            layout="fixed"
+                        />
+                    </div>
+                </div>
+                <div className={'projects__media-item projects__media-item--4'}>
+                    <div className={'projects___media-item-browser'}>
+                        <div className="top">
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                            <span className="dot"></span>
+                        </div>
+                        <Image
+                            src={fpo3}
+                            alt="FPO"
+                            placeholder="blur" // Optional blur-up while loading
+                            layout="fixed"
+                        />
+                    </div>
+                </div>
             </div>
+        </div>
+        <div className={`projects__indicator  ${showAdditionalInfo ? 'projects__indicator--show': ''}`}>
+            <div>&#9632;</div>
         </div>
     </section>
     )
