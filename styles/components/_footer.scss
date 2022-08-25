@@ -1,0 +1,23 @@
+// Footer
+
+.footer {
+    display: flex;
+    padding: 25px;
+    width: 100%;
+    display: flex;
+    align-content: center;
+    border-top: 1px solid $gray;
+
+    p{
+        &:nth-child(1) {
+            width: 210px;
+        }
+        &:nth-child(2) {
+            width: calc(33% - 210px);
+        }
+        &:nth-child(3) {
+            width: 21.3%;
+            padding-left: 25px;
+        }
+    }
+}
