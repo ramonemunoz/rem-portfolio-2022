@@ -92,7 +92,7 @@
 
     &__description {
         margin-top: 25px;
-        max-height: 90vh;
+        max-height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -169,6 +169,7 @@
         white-space: nowrap;
         height: 100%;
         overscroll-behavior-x: contain;
+        padding-right: 25px;
     }
 
     &__media-item {
@@ -185,31 +186,31 @@
         }
 
         &--1 {
-            margin: 0 40px 0 60px;
+            margin: 10px 0 -60px -60px;
             z-index: 1;
             position: relative;
-            top: -70px
+            top: -170px
         }
 
         &--2 {
-            margin: 0 -5px 0 10px;
+            margin: 10px 0 0 -10px;
             z-index: 2;
             position: relative;
-            top: -20px
+            top: -60px
         }
 
         &--3 {
-            margin: 0 -40px 0 -75px;
+            margin: 10px 0 -10px -75px;
             z-index: 1;
             position: relative;
             top: -85px
         }
 
         &--4 {
-            margin: 0 40px 0 -40px;
+            margin: 10px 0 -50px -40px;
             z-index: 2;
             position: relative;
-            top: -60px
+            top: -150px
         }
     }
 

@@ -12,9 +12,6 @@ export default function Projects({allProjects, allContent}) {
 
     const [showAdditionalInfo, setShowAdditionalInfo] = useState(false)
 
-    console.log('allProjects', allProjects)
-
-
     return (
     <section className={'projects'}>
         <div className={'projects__info'}>

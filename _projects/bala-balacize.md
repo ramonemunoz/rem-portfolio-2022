@@ -4,18 +4,46 @@ year: "2022"
 technology: "HTML, SCSS, JS, Gatsby Cloud, Wordpress, Shopify"
 framework: "Gatsby.js"
 images:
-  - url: "/assets/projects/FPO-Desktop.png"
+  - url: "/assets/projects/balacize/Desktop-balacize.png"
     width: 1920
     height: 1080
-    alt: "A placholder image that contains a solid color background with the leters FPO in the middle"
-  - url: "/assets/projects/FPO-Laptop.png"
+    alt: ""
+  - url: "/assets/projects/balacize/Laptop-balacize.png"
     width: 992
     height: 558
-    alt: "A placholder image that contains a solid color background with the leters FPO in the middle"
-  - url: "/assets/projects/FPO-Mobile.png"
+    alt: ""
+  - url: "/assets/projects/balacize/Mobile-balacize.png"
     width: 428
     height: 926
-    alt: "A placholder image that contains a solid color background with the leters FPO in the middle"
+    alt: ""
+  - url: "/assets/projects/balacize/Laptop-balacize-1.png"
+    width: 992
+    height: 558
+    alt: ""
+  - url: "/assets/projects/balacize/Laptop-balacize-2.png"
+    width: 992
+    height: 558
+    alt: ""
+  - url: "/assets/projects/balacize/Mobile-balacize-1.png"
+    width: 428
+    height: 926
+    alt: ""
+  - url: "/assets/projects/balacize/Mobile-balacize-2.png"
+    width: 428
+    height: 926
+    alt: ""
+  - url: "/assets/projects/balacize/Desktop-balacize-1.png"
+    width: 1920
+    height: 1080
+    alt: ""
+  - url: "/assets/projects/balacize/Laptop-balacize-3.png"
+    width: 992
+    height: 558
+    alt: ""
+  - url: "/assets/projects/balacize/Mobile-balacize-3.png"
+    width: 428
+    height: 926
+    alt: ""
 url: "https://www.shopbala.com/balacize/"
 position: 2
 ---

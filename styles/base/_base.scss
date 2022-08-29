@@ -27,6 +27,10 @@ body {
 		.projects__title-container {
 			background-color: $black;
 		}
+
+		.projects__description-info-body p:first-of-type {
+			color: #ffffff;
+		}
     }
 }
 
