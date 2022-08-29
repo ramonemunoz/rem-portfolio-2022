@@ -92,7 +92,7 @@
 
     &__description {
         margin-top: 25px;
-        min-height: 90vh;
+        max-height: 90vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -107,6 +107,8 @@
             opacity: 0;
             visibility: hidden;
             width: 0;
+            height: 0;
+            overflow: hidden;
         }
     }
 
@@ -115,6 +117,14 @@
             &:first-of-type {
                 color: $gray-light;
                 margin-bottom: 40px;
+            }
+        }
+    }
+    
+    &__description-info-body {
+        p {
+            &:first-of-type {
+                color: $black;
             }
         }
     }
@@ -137,6 +147,8 @@
         }
 
         li {
+            cursor: pointer;
+
             div{
                 display: flex;
                 justify-content: space-between;
@@ -223,6 +235,7 @@
 
         span {
             vertical-align: bottom;
+            width: min-content;
         }
     }
 

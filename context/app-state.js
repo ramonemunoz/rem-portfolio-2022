@@ -4,6 +4,7 @@ const AppContext = createContext();
 
 export function AppWrapper({ children }) {
   const [isAboutOpen, setIsAboutOpen] = useState(false)
+  const [currentProject, setCurrentProject] = useState(0)
 
   let sharedState = 'Test'
   let anotherTest = 'Another Test'
@@ -19,7 +20,9 @@ export function AppWrapper({ children }) {
             anotherTest,
             testFunction,
             isAboutOpen,
-            setIsAboutOpen
+            setIsAboutOpen,
+            currentProject,
+            setCurrentProject
         }}>
       {children}
     </AppContext.Provider>

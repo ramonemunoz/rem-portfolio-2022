@@ -1,7 +1,3 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
 import Layout from '../components/layout'
 import Header from '../components/header'
 import About from '../components/about'
@@ -9,52 +5,51 @@ import Projects from '../components/projects'
 import Footer from '../components/footer'
 
 
-import { getAllPosts } from '../lib/api'
+import { getAllProjects } from '../lib/api'
+import markdownToHtml from '../lib/markdownToHtml'
+
 import Head from 'next/head'
 
-export default function Index({ allPosts }) {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+export default function Index({ allProjects, allContent }) {
+
   return (
     <>
       <Layout>
         <Head>
           <title>Ramon Munoz | Front End Engineer</title>
         </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
+        <Header />
+        <About />
+        <Projects allProjects={allProjects} allContent={allContent}/>
+        <Footer />
       </Layout>
-      <Header />
-      <About />
-      <Projects />
-      <Footer />
     </>
   )
 }
 
 export async function getStaticProps() {
-  const allPosts = getAllPosts([
+  const allProjects = getAllProjects([
     'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
+    'year',
+    'technology',
+    'framework',
+    'images',
+    'url',
+    'content',
+    'position',
   ])
 
+  const allContent = []
+
+  for (const project of allProjects) {
+    const bodyText = await markdownToHtml(project.content || '')
+    allContent.push(bodyText)
+  }
+
   return {
-    props: { allPosts },
+    props: { 
+      allProjects,
+      allContent,
+    },
   }
 }
