@@ -48,6 +48,6 @@ url: "https://www.darrenvargas.com/"
 position: 4
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies 1.
+Darren is from Santa Ana, Ca. He is a second generation Mexican American. Darren graduated with a Bachelors of Fine Art with an emphasis in Print Design from Fresno State University - the first in his family to earn a degree. Originally studying brand systems and identity development, he has now transitioned into commercial photography with a focus in campaign development, portraiture, environmental portraiture, and studio photography.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies 1.
+He has worked with brands such as: Vanoss Gaming, Nike, MARKET, Calvin Klein, Cypress Hill, Soul Assassins and many more. He has been published and featured in Deadline News, Stay Fresh Canada, FARFETCH, and Calvin Klein

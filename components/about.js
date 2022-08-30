@@ -59,19 +59,25 @@ export default function About() {
                     </div>
                     <div className={'about__intrests-body'}>
                         <div>
-                            <p>Restaraunt 1</p>
-                            <p>Restaraunt 2</p>
-                            <p>Restaraunt 3</p>
+                            <p>Gish Bac</p>
+                            <p>Golden Deli</p>
+                            <p>Kazu Mori</p>
                         </div>
                         <div>
-                            <p>Location 1</p>
-                            <p>Location 2</p>
-                            <p>Location 3</p>
+                            <a target="_blank" href="https://www.yelp.com/biz/gish-bac-restaurant-los-angeles-2" rel="noopener noreferrer">
+                                4163 W Washington Blvd
+                            </a>
+                            <a target="_blank" href="https://www.yelp.com/biz/golden-deli-san-gabriel-san-gabriel-2" rel="noopener noreferrer">
+                                815 W Las Tunas D
+                            </a>
+                            <a target="_blank" href="https://www.yelp.com/biz/kazu-mori-arcadia-2" rel="noopener noreferrer">
+                                1101 W Huntington Dr
+                            </a>
                         </div>
                         <div>
-                            <p>Order 1</p>
-                            <p>Order 2</p>
-                            <p>Order 3</p>
+                            <p>Mole Negro</p>
+                            <p>PHO #1</p>
+                            <p>Curry Pork</p>
                         </div>
                     </div>
                 </div>
@@ -79,21 +85,39 @@ export default function About() {
                     <div className={'about__intrests-body'}>
                             <div>
                                 <p className={'about__intrests-subheader'}>Learning:</p>
-                                <p>Course 1</p>
-                                <p>Course 2</p>
-                                <p>Course 3</p>
+                                <a target="_blank" href="https://epicreact.dev/" rel="noopener noreferrer">
+                                    Epic React
+                                </a>
+                                <a target="_blank" href="https://neetcode.io/practice" rel="noopener noreferrer">
+                                    NeetCode
+                                </a>
+                                <a target="_blank" href="https://threejs-journey.com/" rel="noopener noreferrer">
+                                    Three JS
+                                </a>
                             </div>
                             <div>
                             <p className={'about__intrests-subheader'}>Listening:</p>
-                                <p>Artist/Song 1</p>
-                                <p>Artist/Song 2</p>
-                                <p>Artist/Song 3</p>
+                                <a target="_blank" href="https://open.spotify.com/track/1W0OCrMsRP1SLTEdw3JwEz?si=42daac9c510b4e75" rel="noopener noreferrer">
+                                    TLSP/ Sweet Dreams, TN
+                                </a>
+                                <a target="_blank" href="https://open.spotify.com/track/3lGMtkONrZdJ8kTCg6KIFf?si=26f8fd3dc95a4e3c" rel="noopener noreferrer">
+                                    Natalia Lafourcade/ Hasta la Raiz
+                                </a>
+                                <a target="_blank" href="https://open.spotify.com/track/2vKa6i0SBDa6NzYgnOpqRu?si=de608f5ada5945cf" rel="noopener noreferrer">
+                                    Concorde/ Floating There
+                                </a>
                             </div>
                             <div>
                                 <p className={'about__intrests-subheader'}>Watching:</p>
-                                <p>Movie/Show 1</p>
-                                <p>Movie/Show 2</p>
-                                <p>Movie/Show 3</p>
+                                <a target="_blank" href="https://play.hbomax.com/page/urn:hbo:page:GVU2b9AHpHo7DwvwIAT4i:type:series" rel="noopener noreferrer">
+                                    The Sopranos
+                                </a>
+                                <a target="_blank" href="https://www.nope.movie/" rel="noopener noreferrer">
+                                    NOPE
+                                </a>
+                                <a target="_blank" href="https://www.hulu.com/series/the-bear-05eb6a8e-90ed-4947-8c0b-e6536cbddd5f" rel="noopener noreferrer">
+                                    The Bear
+                                </a>
                             </div>
                     </div>
                 </div>

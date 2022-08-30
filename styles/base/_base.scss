@@ -28,7 +28,8 @@ body {
 			background-color: $black;
 		}
 
-		.projects__description-info-body p:first-of-type {
+		.projects__description-info-body p:first-of-type,
+		.projects__description-info-body p{
 			color: #ffffff;
 		}
     }
@@ -48,6 +49,10 @@ a {
 	text-decoration: none;
 	color: inherit;
 	cursor: pointer;
+
+	&:hover {
+		text-decoration: underline;
+	}
 }
 
 h1,h2,h3,h4,h5,h6 {

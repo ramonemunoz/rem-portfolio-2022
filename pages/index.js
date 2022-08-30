@@ -1,16 +1,16 @@
+import Head from 'next/head'
+import { getPlaiceholder } from 'plaiceholder';
+
 import Layout from '../components/layout'
 import Header from '../components/header'
 import About from '../components/about'
 import Projects from '../components/projects'
 import Footer from '../components/footer'
 
-
 import { getAllProjects } from '../lib/api'
 import markdownToHtml from '../lib/markdownToHtml'
 
-import Head from 'next/head'
-
-export default function Index({ allProjects, allContent }) {
+export default function Index({ allProjects, allContent, allImages }) {
 
   return (
     <>
@@ -20,7 +20,11 @@ export default function Index({ allProjects, allContent }) {
         </Head>
         <Header />
         <About />
-        <Projects allProjects={allProjects} allContent={allContent}/>
+        <Projects 
+          allProjects={allProjects}
+          allContent={allContent}
+          allImages={allImages}
+        />
         <Footer />
       </Layout>
     </>
@@ -40,16 +44,27 @@ export async function getStaticProps() {
   ])
 
   const allContent = []
+  const allImages = []
+  let imageArray = []
 
   for (const project of allProjects) {
-    const bodyText = await markdownToHtml(project.content || '')
-    allContent.push(bodyText)
+    const bodyText = await markdownToHtml(project.content || '');
+    allContent.push(bodyText);
+
+    for (const image of project.images) {
+      const { base64, img } = await getPlaiceholder(image.url);
+      imageArray.push({base64,img});
+    }
+
+    allImages.push(imageArray);
+    imageArray = [];
   }
 
   return {
     props: { 
       allProjects,
       allContent,
+      allImages,
     },
   }
 }

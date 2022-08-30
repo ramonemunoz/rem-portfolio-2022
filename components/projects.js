@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Image from 'next/image'
 
 import { useAppContext } from '../context/app-state';
 
-export default function Projects({allProjects, allContent}) {
+export default function Projects({allProjects, allContent, allImages}) {
 
     const {
         currentProject,
@@ -11,6 +11,14 @@ export default function Projects({allProjects, allContent}) {
       } = useAppContext()
 
     const [showAdditionalInfo, setShowAdditionalInfo] = useState(false)
+
+    const refMediaContainer = useRef()
+
+    useEffect(() => {
+        if(refMediaContainer.current) {
+            refMediaContainer.current.scrollLeft = 0
+        }
+    }, [currentProject])
 
     return (
     <section className={'projects'}>
@@ -65,8 +73,8 @@ export default function Projects({allProjects, allContent}) {
             </div>
         </div>
         <div className={'projects__media'}>
-            <div className={'projects__media-container'}>
-                {allProjects[currentProject].images.map((image, index) => {
+            <div className={'projects__media-container'} ref={refMediaContainer}>
+                {allImages[currentProject].map(({base64, img}, index) => {
                     let rand = Math.random() * 4;
                     rand = Math.floor(rand) + 1;
                     return (
@@ -79,10 +87,12 @@ export default function Projects({allProjects, allContent}) {
                                 </div>
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <Image
-                                    src={image.url}
-                                    alt={image.alt}
-                                    height={image.height}
-                                    width={image.width}
+                                    src={img.src}
+                                    alt={img.alt}
+                                    height={img.height}
+                                    width={img.width}
+                                    blurDataURL={base64}
+                                    placeholder="blur"
                                     layout="fixed"
                                 />
                             </div>
