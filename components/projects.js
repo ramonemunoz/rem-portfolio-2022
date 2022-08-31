@@ -82,8 +82,6 @@ export default function Projects({allProjects, allContent, allImages}) {
                             <div className={'projects___media-item-browser'}>
                                 <div className="top">
                                     <span className="dot"></span>
-                                    <span className="dot"></span>
-                                    <span className="dot"></span>
                                 </div>
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <Image

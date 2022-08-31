@@ -10,9 +10,20 @@
     &__left {
         width: 33.33%;
         display: flex;
+        position: relative;
 
         p {
             margin-right: 95px;
+            position: relative;
+        }
+
+        button {
+            transition: opacity 500ms ease;
+
+            &.hide {
+                display: none;
+            }
+
         }
     }
 

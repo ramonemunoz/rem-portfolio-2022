@@ -6,6 +6,7 @@ import useDarkMode from '../hooks/useDarkMode'
 export default function Header() {
 
   const {
+    isAboutOpen,
     setIsAboutOpen
   } = useAppContext()
 
@@ -15,7 +16,20 @@ export default function Header() {
     <nav className={'header'}>
       <div className={'header__left'}>
         <p>Ramon E. Munoz</p>
-        <button type={'button'} onClick={() => setIsAboutOpen(state => { return !state })}>About</button>
+        <button 
+          className={`${isAboutOpen ? 'hide' : '' }`} 
+          type={'button'} 
+          onClick={() => setIsAboutOpen(state => { return !state })}
+        >
+          About
+        </button>
+        <button 
+          className={`${isAboutOpen ? '' : 'hide' }`} 
+          type={'button'} 
+          onClick={() => setIsAboutOpen(state => { return !state })}
+        >
+          (Hide)
+        </button>
       </div>
       <div className={'header__right'}>
         <div className={'header__availability'}>

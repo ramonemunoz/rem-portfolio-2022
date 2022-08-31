@@ -32,6 +32,11 @@ body {
 		.projects__description-info-body p{
 			color: #ffffff;
 		}
+
+		.about--open::before {
+			background: rgb(0, 0, 0);
+			background: linear-gradient(0deg, rgba(227, 228, 230, 0) 0%, rgba(0, 0, 0, 0.97) 100%);
+		}
     }
 }
 
