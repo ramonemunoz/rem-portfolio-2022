@@ -1,4 +1,6 @@
-// Colors
+/* ============================================================================
+ * Colors
+*/
 
 $white: #ffffff !default;
 $black: #000000 !default;
@@ -6,3 +8,29 @@ $gray: #5d5d5d !default;
 $gray-light: #cccccc !default;
 $gray-medium: #e3e4e6 !default;
 $gray-darkmode: #a2a2a2 !default;
+
+/* ============================================================================
+ * Breakpoints
+*/
+
+$breakpoints: (
+	'mobile': 320px,
+	'tablet': 768px,
+	'laptop': 992px,
+	'desktop': 1200px,
+	'widescreen': 1600px,
+) !default;
+
+/* ============================================================================
+ * Media feature expressions
+*/
+
+$tablet-up: 'min-width: #{map-get($breakpoints, tablet)}';
+$laptop-up: 'min-width: #{map-get($breakpoints, laptop)}';
+$desktop-up: 'min-width: #{map-get($breakpoints, desktop)}';
+$widescreen-up: 'min-width: #{map-get($breakpoints, widescreen)}';
+
+$tablet-down: 'max-width: calc(#{map-get($breakpoints, tablet)} - 1px)';
+$laptop-down: 'max-width: calc(#{map-get($breakpoints, laptop)} - 1px)';
+$desktop-down: 'max-width: calc(#{map-get($breakpoints, desktop)} - 1px)';
+$widescreen-down: 'max-width: calc(#{map-get($breakpoints, widescreen)} - 1px)';

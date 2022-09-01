@@ -21,11 +21,12 @@ export default function Projects({allProjects, allContent, allImages}) {
     }, [currentProject])
 
     return (
-    <section className={'projects'}>
+    <section className={`projects ${showAdditionalInfo ? 'projects--show' : ''}`}>
         <div className={'projects__info'}>
             <div className={`projects__title-container ${showAdditionalInfo ? 'projects__title-container--show': ''}`}
                     onMouseEnter={() => setShowAdditionalInfo(true)}
                     onMouseLeave={() => setShowAdditionalInfo(false)}
+                    onClick={() => setShowAdditionalInfo(state => !state)}
             >
                 <div className={`projects__additional-info-tech ${showAdditionalInfo ? 'projects__additional-info-tech--show': ''}`}>
                     <p className={'projects__additional-info-header'}>TECHNOLOGY:</p>
@@ -84,15 +85,18 @@ export default function Projects({allProjects, allContent, allImages}) {
                                     <span className="dot"></span>
                                 </div>
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <Image
-                                    src={img.src}
-                                    alt={img.alt}
-                                    height={img.height}
-                                    width={img.width}
-                                    blurDataURL={base64}
-                                    placeholder="blur"
-                                    layout="fixed"
-                                />
+                                <div className={`image-container ${img.height === 926 ? 'image-container--tall' : 'image-container--wide'}`}>
+                                    <Image
+                                        className={'image'}
+                                        src={img.src}
+                                        alt={img.alt}
+                                        height={img.height}
+                                        width={img.width}
+                                        blurDataURL={base64}
+                                        placeholder="blur"
+                                        layout="intrinsic"
+                                    />
+                                </div>
                             </div>
                         </div>
                     )

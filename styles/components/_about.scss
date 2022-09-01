@@ -1,7 +1,7 @@
 // About Component
 
 .about {
-    max-height: 555px;
+    max-height: 90vh;
     padding: 0 25px;
     border-bottom: 1px solid $gray;
     position: relative;
@@ -10,10 +10,20 @@
     transform: rotateX(90deg);
     transform-origin: top; 
     transition: transform 1s, height .5s;
+    flex-wrap: wrap;
+    
+    @include at-laptop {
+        flex-wrap: nowrap;
+        max-height: 555px;
+    }
 
     &--open{
         transform: rotateX(0deg);
-        height: 555px;
+        height: 80vh;
+
+        @include at-laptop {
+            height: 555px;
+        }
 
         &::before {
             content: '';
@@ -36,11 +46,15 @@
     }
 
     &__bio {
-        width: 33.33%;
-        border-right: 4px solid $gray;
+        width: 100%;
         min-height: 100%;
-        padding-right: 25px;
         overflow: scroll;
+
+        @include at-laptop {
+            width: 33.33%;
+            border-right: 4px solid $gray;
+            padding-right: 25px;
+        }
     }
 
     &__bio-header {
@@ -56,8 +70,11 @@
     }
 
     &__bio-bio {
-        min-height: 100%;
         padding-bottom: 120px;
+
+        @include at-laptop {
+            min-height: 100%;
+        }
 
         p {
             margin-bottom: 1.6rem;
@@ -72,7 +89,12 @@
         bottom: 45px;
         left: 25px;
         position: absolute;
-        width: calc(33% - 42px);
+        width: calc(100% - 50px);
+
+        @include at-laptop {
+            width: calc(33% - 42px);
+        }
+
     }
 
     &__links-container {
@@ -82,15 +104,32 @@
 
     &__links-development {
         display: flex;
-        column-gap: 60px;
+        column-gap: 10px;
+
+        @include at-desktop {
+            column-gap: 60px;
+        }
     }
 
     &__intrests {
-        width: 66.66%;
-        padding: 0 0 25px 25px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding-bottom: 50px;
+
+        @include at-laptop {
+            width: 66.66%;
+            padding: 0 0 25px 25px;
+        }
+    }
+
+    &__intrests-top {
+        margin-bottom: 100px;
+
+        @include at-laptop {
+            margin-bottom: 0;
+        }
     }
 
     &__intrests-header {
@@ -102,34 +141,82 @@
             color: $gray-light;
 
             &:nth-child(1) {
-                width: 30%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 30%;
+                }
             }
             &:nth-child(2) {
-                width: 35%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 35%;
+                }
             }
             &:nth-child(3) {
-                width: 32%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 32%;
+                }
             }
         }
     }
 
     &__intrests-body {
         display: flex;
+        column-gap: 20px;
+
+        @include at-laptop {
+            column-gap: unset;
+        }
     
         div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include at-laptop {
+                display: unset;
+                flex-direction: unset;
+                justify-content: unset;
+            }
+
             &:nth-child(1) {
-                width: 30%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 30%;
+                }
             }
             &:nth-child(2) {
-                width: 35%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 35%;
+                }
             }
             &:nth-child(3) {
-                width: 32%;
+                width: 33.33%;
+
+                @include at-laptop {
+                    width: 32%;
+                }
             }
         }
 
         a {
             display: block;
+        }
+
+        p,
+        a {
+            margin-bottom: 15px;
+
+            @include at-laptop {
+                margin-bottom: 0;
+            }
         }
 
     }

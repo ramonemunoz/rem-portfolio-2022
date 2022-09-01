@@ -22,7 +22,7 @@ export function AppWrapper({ children }) {
             isAboutOpen,
             setIsAboutOpen,
             currentProject,
-            setCurrentProject
+            setCurrentProject,
         }}>
       {children}
     </AppContext.Provider>

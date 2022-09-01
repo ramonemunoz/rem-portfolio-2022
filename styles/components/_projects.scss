@@ -4,91 +4,220 @@
     display: flex;
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
+
+    @include at-laptop {
+        flex-wrap: nowrap;
+    }
+
+    &--show {
+        & .projects {
+            &__info {
+                width: 100%;
+                
+                @include at-laptop {
+                    width: 40%;
+                }
+
+                @include at-widescreen {
+                    width: 33.33%;
+                }
+            }
+
+            &__media {
+                width: 100%;
+
+                @include at-laptop {
+                    width: 60%;
+                }
+
+                @include at-widescreen {
+                    width: 66.66%;
+                }
+            }
+        }
+    }
     
     &__info {
         display: flex;
-        width: 33.33%;
+        width: 100%;
         position: relative;
         overflow: hidden;
+        order: 2;
+        flex-wrap: wrap;
+
+        @include at-laptop {
+            order: 1;
+            width: 33.33%;
+            flex-wrap: nowrap;
+        }
     }
 
     &__title-container {
-        min-width: 114px;
-        margin-right: 101px;
+        min-width: 90px;
         transition: width 500ms ease-in-out;
         background-color: $white;
         display: flex;
+        flex-wrap: wrap;
+
+        @include at-laptop {
+            margin-right: 20px;
+            flex-wrap: nowrap;
+        }
 
         &--show {
-            width: 100vw;
-            justify-content: flex-end;
-            margin-right: 25px;
+            @include at-laptop {
+                width: 100vw;
+                justify-content: flex-end;
+                margin-right: 25px;
+            }
+        }
 
+        @include at-desktop {
+            margin-right: 101px;
+            min-width: 114px;
         }
     }
 
     &__additional-info-tech {
         display: flex;
         flex-direction: column;
-        border-right: 1px solid $gray;
-        padding: 25px;
-        display: none;
+        overflow: hidden;
+        transition: .5s ease max-height, .5s ease max-width, .5s padding;
+        max-height: 0;
+        padding: 0 25px 0 25px;
+
+        @include at-laptop {
+            max-width: 0;
+            padding: 0;
+        }
+
 
         &--show {
-            display: flex;
+            padding: 25px;
+            max-width: 999px;
+            max-height: 999px;
         }
 
         p {
             &:nth-of-type(2) {
-                margin-bottom: 130px;
+                margin-bottom: 30px;
+                
+                @include at-laptop {
+                    margin-bottom: 130px;
+                }
             }
         }
     }
 
     &__additional-info-header {
         color: $gray-light;
-        margin-bottom: 40px;
+        margin-bottom: 20px;
+        
+        @include at-laptop {
+            margin-bottom: 40px;
+
+        }
     }
 
     &__additional-info-links {
-        flex-direction: column;
-        justify-content: space-around;
-        border-right: 1px solid $gray;
-        padding-left: 40px;
-        display: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid $gray;
+        border-bottom: 1px solid $gray;
+        transition: .5s ease max-height, .5s ease max-width, .5s padding;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 25px 0 25px;
+        
+        @include at-laptop {
+            flex-direction: column;
+            justify-content: space-around;
+            border-right: 1px solid $gray;
+            border-left: 1px solid $gray;
+            border-top: none;
+            border-bottom: none;
+            width: unset;
+            max-width: 0;
+            padding: 0;
+        }
 
         &--show {
-            display: flex;
+            padding: 25px;
+            max-width: 9999px;
+            max-height: 9999px;
+
+            @include at-laptop {
+                padding-left: 65px;
+            }
         }
 
         p,
         a {
-            writing-mode: vertical-rl;
-            font-size: 10rem;
-            line-height: 9.5rem;
-            font-weight: 300;
+            font-size: 4rem;
+
+            @include at-laptop{
+                writing-mode: vertical-rl;
+                font-size: 10rem;
+                line-height: 9.5rem;
+                font-weight: 300;
+            }
         }
     }
 
     &__title {
         display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+
+        @include at-laptop {
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 0;
+        }
 
         h1 {
-            font-size: 10rem;
-            line-height: 9.5rem;
-            writing-mode: vertical-rl;
-            transform: rotate(180deg);
-            max-height: 60vh;
-            font-weight: 300;
-            min-height: 780px;
+            font-size: 4rem;
+            order: 2;
+            line-height: 4.2rem;
+
+            @include at-laptop {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                max-height: 60vh;
+                min-height: 780px;
+                line-height: 9.5rem;
+                font-size: 7rem;
+                line-height: 9.5rem;
+                font-weight: 300;
+                order: 1;
+                line-height: 8.5rem;
+            }
+
+            @include at-desktop {
+                font-size: 10rem;
+            }
         }
     }
 
     &__number {
-        font-size: 15rem;
+        font-size: 8rem;
         font-weight: 300;
+        order: 1;
+        margin-right: 20px;
+
+        @include at-laptop {
+            order: 2;
+            margin-right: 0;
+        }
+
+        @include at-desktop {
+            font-size: 15rem;
+        }
     }
 
     &__description {
@@ -97,19 +226,24 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        border-left: 1px solid $gray;
         padding: 0 20px;
         opacity: 1;
         visibility: visible;
         transition: all 250ms ease;
 
+        @include at-laptop {
+            border-left: 1px solid $gray;
+        }
+
         &--hide {
-            padding: 0;
-            opacity: 0;
-            visibility: hidden;
-            width: 0;
-            height: 0;
-            overflow: hidden;
+            @include at-laptop {
+                padding: 0;
+                opacity: 0;
+                visibility: hidden;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
         }
     }
 
@@ -159,10 +293,20 @@
 
     &__media {
         background-color: $gray-medium;
-        width: 66.66%;
+        width: 100%;
+        height: 85vh;
         padding: 50px 0 0 0;
         border-left: 1px solid $gray;
         position: relative;
+        order: 1;
+
+        @include at-laptop {
+            order: 2;
+            width: 66.66%;
+            height: 100%;
+        }
+
+
     }
 
     &__media-container {
@@ -173,6 +317,10 @@
         overscroll-behavior-x: contain;
         padding-right: 25px;
 
+        @include at-laptop {
+            height: 100%;
+        }
+
         &::before {
             content: '';
             position: absolute;
@@ -181,8 +329,12 @@
             background: rgb(227,228,230);
             background: linear-gradient(90deg, rgba(227,228,230,0) 0%, rgba(227,228,230,0.97) 100%);
             height: 100%;
-            width: 80px;
+            width: 40px;
             z-index: 9;
+
+            @include at-laptop {
+                width: 80px;
+            }
         }
     }
 
@@ -192,6 +344,10 @@
 
         &:first-of-type {
             padding-left: 45px !important;
+
+            @include at-desktop {
+                width: 1920px;
+            }
         }
 
         &:not(:first-of-type ):hover {
@@ -200,31 +356,51 @@
         }
 
         &--1 {
-            margin: 10px 0 -60px -60px;
+            margin: 10px 0 -60px -10px;
             z-index: 1;
             position: relative;
-            top: -170px
+            top: -40px;
+
+            @include at-laptop {
+                margin: 10px 0 -60px -60px;
+                top: -170px;
+            }
         }
 
         &--2 {
             margin: 10px 0 0 -10px;
             z-index: 2;
             position: relative;
-            top: -60px
+            top: -10px;
+
+            @include at-laptop {
+                margin: 10px 0 0 -10px;
+                top: -60px;
+            }
         }
 
         &--3 {
-            margin: 10px 0 -10px -75px;
+            margin: 10px 0 -10px -5px;
             z-index: 1;
             position: relative;
-            top: -85px
+            top: -25px;
+
+            @include at-laptop {
+                margin: 10px 0 -10px -75px;
+                top: -85px;
+            }
         }
 
         &--4 {
-            margin: 10px 0 -50px -40px;
+            margin: 10px 0 -50px -20px;
             z-index: 2;
             position: relative;
-            top: -150px
+            top: -10px;
+
+            @include at-laptop {
+                margin: 10px 0 -50px -40px;
+                top: -150px;
+            }
         }
     }
 
@@ -249,14 +425,38 @@
 
         span {
             vertical-align: bottom;
-            width: min-content;
+            // width: min-content;
         }
+
+        .image-container {
+            &--tall{
+                width: 300px;
+
+                @include at-desktop {
+                    width: unset;
+                }
+            }
+
+            &--wide {
+                width: 1000px;
+
+                @include at-desktop {
+                    width: unset;
+                }
+            }
+
+          }
     }
 
     &__indicator {
         bottom: -10px;
         left: 10px;
         position: absolute;
+        display: none;
+
+        @include at-laptop {
+            display: block;
+        }
 
 
         &--show {

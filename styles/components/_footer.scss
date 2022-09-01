@@ -7,17 +7,28 @@
     display: flex;
     align-content: center;
     border-top: 1px solid $gray;
+    justify-content: space-between;
+
+    @include at-desktop {
+        justify-content: flex-start;
+    }
 
     p{
         &:nth-child(1) {
-            width: 210px;
+            @include at-desktop {
+                width: 210px;
+            }
         }
         &:nth-child(2) {
-            width: calc(33% - 210px);
+            @include at-desktop {
+                width: calc(33% - 210px);
+            }
         }
         &:nth-child(3) {
-            width: 21.3%;
-            padding-left: 25px;
+            @include at-desktop {
+                width: 21.3%;
+                padding-left: 25px;
+            }
         }
     }
 }
