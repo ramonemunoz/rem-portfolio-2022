@@ -157,13 +157,12 @@
         p,
         a {
             font-size: 4rem;
+            font-family: 'Gerstner-Programm-Light';
 
             @include at-laptop{
                 writing-mode: vertical-rl;
                 font-size: 10rem;
                 line-height: 9.5rem;
-                font-weight: 300;
-                font-family: 'Gerstner-Programm-Light';
             }
         }
 
