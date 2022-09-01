@@ -14,6 +14,17 @@ export default function Projects({allProjects, allContent, allImages}) {
 
     const refMediaContainer = useRef()
 
+    const setData = index => {
+        setCurrentProject(index)
+
+        if (typeof window !== 'undefined') {
+            if (window.innerWidth < 992) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+    }
+
     useEffect(() => {
         if(refMediaContainer.current) {
             refMediaContainer.current.scrollLeft = 0
@@ -60,7 +71,7 @@ export default function Projects({allProjects, allContent, allImages}) {
                             return (
                                 <li 
                                     key={index}
-                                    onClick={() => setCurrentProject(index)}
+                                    onClick={() => setData(index)}
                                 >
                                     <div>
                                         <span>{project.title}</span>

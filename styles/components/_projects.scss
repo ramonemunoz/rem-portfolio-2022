@@ -165,6 +165,15 @@
                 font-weight: 300;
             }
         }
+
+        a {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+
+            @include at-laptop {
+                text-decoration: none;
+            }
+        }
     }
 
     &__title {
@@ -184,6 +193,8 @@
             font-size: 4rem;
             order: 2;
             line-height: 4.2rem;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
 
             @include at-laptop {
                 writing-mode: vertical-rl;
@@ -196,6 +207,7 @@
                 font-weight: 300;
                 order: 1;
                 line-height: 8.5rem;
+                text-decoration: none;
             }
 
             @include at-desktop {
@@ -287,6 +299,17 @@
             div{
                 display: flex;
                 justify-content: space-between;
+
+                span {
+                    &:first-of-type {
+                        text-decoration: underline;
+                        text-decoration-thickness: 1px;
+
+                        @include at-laptop {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
     }
