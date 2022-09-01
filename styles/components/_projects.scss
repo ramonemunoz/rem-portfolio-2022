@@ -477,6 +477,7 @@
         left: 10px;
         position: absolute;
         display: none;
+        transition: all 250ms ease-in-out;
 
         @include at-laptop {
             display: block;
@@ -485,7 +486,6 @@
 
         &--show {
             left: 27%;
-            transition: all 250ms ease-in-out;
         }
     }
 
