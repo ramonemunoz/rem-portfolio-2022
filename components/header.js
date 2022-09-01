@@ -36,7 +36,7 @@ export default function Header() {
           <p>Available from 2-6pm</p>
           <p>Monday-Friday</p>
         </div>
-        <p><a href="mailto:ramon@ramon-munoz.com">Contact</a></p>
+        <p><a href="mailto:ramon@ramonmunoz.com">Contact</a></p>
         <CurrentTime />
         <button type={'button'} onClick={() => setTheme(state => { return state === 'dark-mode' ? 'light-mode' : 'dark-mode';})}>&#11044;</button>
       </div>
