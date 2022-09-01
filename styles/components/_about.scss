@@ -95,7 +95,7 @@
     }
 
     &__links {
-        bottom: 45px;
+        bottom: 25px;
         left: 25px;
         position: absolute;
         width: calc(100% - 50px);
@@ -144,7 +144,7 @@
     &__intrests-header {
         display: flex;
         padding-top: 25px;
-        margin-bottom: 45px;
+        margin-bottom: 40px;
 
         p {
             color: $gray-light;
