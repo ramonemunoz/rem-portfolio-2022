@@ -65,10 +65,12 @@
                     display: block;
                 }
             }
-            &:nth-child(4) {
-                width: 3%;
-                text-align: center;
-            }
+        }
+
+        button {
+            width: 3%;
+            text-align: center;
+            line-height: 22.5px;
         }
     }
 
