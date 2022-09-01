@@ -15,7 +15,10 @@
 
     p{
         &:nth-child(1) {
+            display: none;
+    
             @include at-desktop {
+                display: block;
                 width: 210px;
             }
         }
@@ -25,9 +28,12 @@
             }
         }
         &:nth-child(3) {
+            display: none;
+
             @include at-desktop {
                 width: 21.3%;
                 padding-left: 25px;
+                display: block;
             }
         }
     }
