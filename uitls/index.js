@@ -65,10 +65,12 @@ export function consoleLog() {
   
     setTimeout(()=> {
       console.log(`
-        • Framework: Next.js
-        • Styles: SCSS
-        • Hosting: Netlify
-        • Dev Time: 3 Weeks
+• Framework: Next.js
+• Styles: SCSS
+• Hosting: Netlify
+• Dev Time: 3 Weeks
+• Data Source: MD Files
+• Starter Template: https://next-blog-starter.vercel.app/
       `)
     }, 1050)
 
