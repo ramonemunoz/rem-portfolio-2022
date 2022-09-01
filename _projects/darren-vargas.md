@@ -45,7 +45,7 @@ images:
     height: 926
     alt: ""
 url: "https://www.darrenvargas.com/"
-position: 4
+position: 7
 ---
 
 Darren is from Santa Ana, Ca. He is a second generation Mexican American. Darren graduated with a Bachelors of Fine Art with an emphasis in Print Design from Fresno State University - the first in his family to earn a degree. Originally studying brand systems and identity development, he has now transitioned into commercial photography with a focus in campaign development, portraiture, environmental portraiture, and studio photography.

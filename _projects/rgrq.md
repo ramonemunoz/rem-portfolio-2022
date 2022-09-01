@@ -45,7 +45,7 @@ images:
     height: 926
     alt: ""
 url: "https://www.rg-rq.com/"
-position: 3
+position: 6
 ---
 
 ROBERTO RODRIGUEZ is an undocumented Mexican immigrant Born and raised in Guadalupe Nuevo Leon Mexico. Currently living in Los Angeles Califas. His Design practice is based around culture, language, communication, and personal experience in life.

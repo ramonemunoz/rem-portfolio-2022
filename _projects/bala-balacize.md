@@ -45,7 +45,7 @@ images:
     height: 926
     alt: ""
 url: "https://www.shopbala.com/balacize/"
-position: 2
+position: 1
 ---
 
 A colorful, design-driven workout experience for fans of Bala fitness accessories. Conceptualized as an opportunity for the brand’s exponentially growing community to optimize workouts and explore new ways of using Bala’s colorful, design-centric workout accessories, the new platform launches with 100 workout modules.

@@ -57,7 +57,7 @@ images:
     height: 926
     alt: ""
 url: "https://www.taylormadegolf.com/mytaylormade-plus.html"
-position: 7
+position: 2
 ---
 
 Behind every Tour player there's a team, providing the support they need to continually compete and improve. Access to the best equipment. Expert advice and coaching. Detailed stat tracking. It's about time every golfer who's serious about playing better gets a taste of the Tour treatment. Introducing MyTaylorMade+.

@@ -45,7 +45,7 @@ images:
     height: 926
     alt: ""
 url: "https://www.shiftleft.io/"
-position: 6
+position: 3
 ---
 
 ShiftLeft helps AppSec teams empower developers to secure more code in less time. Our modern code analysis platform analyzes the flow of data through your application to all components in minutes, detects attackable vulnerabilities with a single scan, and prioritizes remediation efforts to build security into the DNA of every release and accelerate software delivery.
