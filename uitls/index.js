@@ -71,6 +71,7 @@ export function consoleLog() {
 • Dev Time: 3 Weeks
 • Data Source: MD Files
 • Starter Template: https://next-blog-starter.vercel.app/
+• Type Face: Gerstner-Program Light & Medium https://forgotten-shapes.com/gerstner-programm/gerstnerprogramm-medium/typetester?article=gerstner-programm
       `)
     }, 1050)
 
